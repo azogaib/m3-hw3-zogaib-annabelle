@@ -1,19 +1,50 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
+
+    <link rel="stylesheet.less" type="text/css" href="main.less" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <title>Assignment 3 - Annabelle Zogaib</title>
     <meta name="description" content="">
   </head>
+
   <body>
-    <ul>
-      <li>Home</li>
-      <li>Menu</li>
-      <li>About Us</li>
-      <li>Order Now</li>
-    </ul>
+    <header>
+    <!-- mobile nav -->
+      <nav role="navigation">
+        <div id="menuToggle">
+      
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+      
+          <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Order Now</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    <!-- desktop nav -->
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Order Now</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <h1>Bob's Burgers</h1>
     <button>Order Now</button>
     <h2>World's Best Burgers</h2>
