@@ -1,7 +1,6 @@
 @import "variables.less";
 @import "mixins.less";
 
-
 // General Styling Start
 * {
    margin: 0;
@@ -25,11 +24,8 @@ p {
 }
 // General Styling End
 
-
-
-
 // Hamburger Menu Start
-.desktop-nav, .desktop-bg {
+.desktop-nav, .desktop-bg, .logo-desktop, .desktop {
    display: none;
 }
 
@@ -128,9 +124,6 @@ p {
  }
 // Hamburger Menu End
 
-
-
-
 // Hero Section Start
 .mobile-bg {
    background-color: @background;
@@ -160,7 +153,7 @@ p {
    cursor: pointer;
  }
 
- .logo {
+ .logo-mobile {
    position: absolute;
    top: 25%;
    width: 80%;
@@ -168,19 +161,16 @@ p {
  }
 // Hero Section End
 
-
-
-
 // Main Styling Start
 main {
-   div {
+   .section2 {
       background-color: @white;
    }
    span {
       color: @red;
    }
    h2 {
-      padding: 40px 40px;
+      padding: 40px 40px 15px;
    }
    p {
       padding: 0 40px 15px;
@@ -198,9 +188,6 @@ main {
 }
 // Main Styling End
 
-
-
-
 // Footer Start
 footer {
    background-color: @black;
@@ -215,31 +202,151 @@ footer {
       height: 10px;
    }
 }
-
-
-
 // Footer End
 
 
 
 
+
+
+
 /*** Begin Media Queries ****/
+// 600 Pixels
+@media(min-width: 600px) {
+   main {
+      img {
+         max-width: 33%;
+      }
+      h2, p {
+         margin: 0 70px;
+      }
+      button {
+         margin: 0 110px;
+      }
+   }
+   footer img {
+      max-width: 33%;
+   }
+}
+
 // 800 Pixels
 @media(min-width: 800px) {
-   .desktop-nav, .desktop-bg {
+   .desktop-nav, .desktop-bg, .logo-desktop, .desktop {
       display: block;
    }
-   #menuToggle, .mobile-bg {
+   #menuToggle, .mobile-bg, .logo-mobile, .mobile {
       display: none;
    }
-   .desktop-bg {
+
+   .buttons {
+      padding: 1.7% 2.7%;
+   }
+
+// Nav Start
+   nav {
+      background: @yellow;
+      width: 100%;
+      ul {
+         padding: 45px 80px 15px;
+         height: 80px;
+      }
+      li {
+         display: inline;
+         padding: 0 2.5%;
+         font-size: @copy;
+         font-family: 'roboto', sans-serif;
+      }
+      a {
+         text-decoration: none;
+         color: @black;
+      }
+      a:hover {
+         color: @red;
+      }
+      span {
+         color: @red;
+         text-transform: uppercase;
+      }
+      span:hover {
+         color: @black;    
+      }
+   }
+// Nav End
+
+// Hero Section Start
+    .desktop-bg {
       background-color: @background;
-   
+      margin-top: -30px;
       img {
          opacity: 33%; 
          width: 100%;
       }
    }
+   
+   .hero-desktop {
+      position: relative;
+      width: 100%;
+    }
+    
+    .desktop-bg img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .hero-desktop button {
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      cursor: pointer;
+    }
+   
+    .logo-desktop {
+      position: absolute;
+      top: 10%;
+      width: 40%;
+      padding: 0 30%;
+    }
+// Hero Section End
 
+// Main Section Start
+main {
+   .section1 {
+      padding: 40px 0 80px;
+      h2 {
+         padding: 40px 40px 15px;
+      }
+      p {
+         padding: 0 35% 15px 40px;
+      }
+      img {
+         width: 200px;
+         float: right;
+         margin-top: -250px;
+         padding: 2% 12% 0 0;
+      }
+   }
+
+   .section2 {
+      padding: 80px 0 80px;
+      h2 {
+         padding: 0 40px 15px 320px;
+      }
+      p {
+         padding: 0 40px 15px 320px;
+      }
+      img {
+         float: left;
+         margin-top: -350px;
+         width: 150px;
+         padding: 8% 0 0 150px;
+      }
+      button {
+         margin: 0 40px 15px 390px;
+      }
+   }
+}
+// Main Section End
 }
 /*** End Media Queries ****/
